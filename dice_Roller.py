@@ -1,7 +1,5 @@
 from random import randint
 
-
-
 #Dice pool
 d4 = 4
 d6 = 6
@@ -10,10 +8,6 @@ d10 = 10
 d12 = 12
 d20 = 20
 d100 = 100
-
-
-print(randint(1,d4))
-
 
 
 def multiroll(num: int, dice: int):
