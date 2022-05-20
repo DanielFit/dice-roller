@@ -1,43 +1,31 @@
-import random
+from random import randint
+
 
 
 #Dice pool
-d4 = [1,2,3,4]
-d6 = [1,2,3,4,5,6]
-d8 = [1,2,3,4,5,6,7,8]
-d10 = [1,2,3,4,5,6,7,8,9,10]
-d12 = [1,2,3,4,5,6,7,8,9,10,11,12]
-d20 = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
-d100 =[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20
-, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40
-, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60
-, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80
-, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100]
+d4 = 4
+d6 = 6
+d8 = 8
+d10 = 10
+d12 = 12
+d20 = 20
+d100 = 100
 
 
-#dice randomizer
-def rolldice(dice: list[int]):
-    roll = random.choice(dice)
-    return roll
+print(randint(1,d4))
 
 
-#dice roller
-def multiroll(n: int, dice: list[int]) -> list[int]:
 
+def multiroll(num: int, dice: int):
 
     count = 0
     result = []
 
-
-    while count < n:
-        roll = rolldice(dice)
+    while count < num:
+        roll = randint(1,dice)
         result.append(roll)
-        count += 1
-
+        count +=1
 
     return result
 
-
-print(multiroll(4,d20),multiroll(3,d12))
-
-
+print(multiroll(3,d4))
